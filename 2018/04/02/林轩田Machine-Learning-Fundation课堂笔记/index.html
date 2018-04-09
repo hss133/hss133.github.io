@@ -89,7 +89,7 @@
 <meta property="og:image" content="https://i.imgur.com/uojkALS.png">
 <meta property="og:image" content="https://i.imgur.com/Ti2Uzxy.png">
 <meta property="og:image" content="https://i.imgur.com/prv6K9s.png">
-<meta property="og:updated_time" content="2018-04-09T08:51:46.691Z">
+<meta property="og:updated_time" content="2018-04-09T09:01:06.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="林轩田Machine Learning Fundation课堂笔记">
 <meta name="twitter:description" content="Day 1  概念介绍简介：  什么是ML？ data（资料）——&amp;gt;ML——&amp;gt;skill（某种表现的增进）。授电脑以渔。 为什么用ML？an alternative route to build complicated systems。（自己学习自己分析然后得到结果） ML应用？无法人工编程的；无法简单定义解的；需要快速决策的（几秒内，人类无法做到）；大规模的user-oriented">
@@ -332,14 +332,15 @@
 <p><strong>机器学习</strong>：use <strong>data</strong> to compute hypothesis <em>g</em> that approximates target <em>f</em> （从资料出发，算出一个假说<em>g</em>，让其与 <em>f</em> 最接近）   </p>
 <p><strong>机器学习和数据挖掘、人工智能、统计学： </strong><br>Data Mining：use (huge) data to find property that is interesting.（很难区分，但不完全相同）<br>Artificial Intelligence：compute something that shows intelligent behavior. (ML是实现AI的方式之一）<br>Statistics： use data to make inference about an unknown process.（ML的工具）   </p>
 <hr>
-<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><p>Hypothesis Set:<em>H</em>=all possible perceptrons(可能的公式的长相)<br>线性分类器<br>回答是非题（银行要不要发信用卡给顾客），问题是，如何从<em>H</em>中找到一个最像<em>f</em>的<em>g</em>。<br>线性可分/线性不可分   </p>
+<h3 id="Day-2-感知机学习算法"><a href="#Day-2-感知机学习算法" class="headerlink" title="Day 2 感知机学习算法"></a>Day 2 感知机学习算法</h3><p>Hypothesis Set:<em>H</em>=all possible perceptrons(可能的公式的长相)<br>线性分类器<br>回答是非题（银行要不要发信用卡给顾客），问题是，如何从<em>H</em>中找到一个最像<em>f</em>的<em>g</em>。<br>线性可分/线性不可分   </p>
 <ul>
 <li><strong>PLA</strong>：<strong>The perceptron learning algorithm</strong>（感知机学习算法）<br>假设训练数据集是线性可分的（可以通过一条直线或者一个平面将训练集完全分类正确），PLA算法流程如下：<br>线性可分情况下可以停止（收敛到最优解）   </li>
 </ul>
 <p>如果线性不可分（有杂绪）：找一个犯错最小的<em>g</em>（NP-Hard）<br><strong>Pocket Algorithm</strong>：保留犯错比较少的权重系数。（类似于贪心算法）。流程入下：   </p>
 <p>如果数据集线性可分，Pocket 比PLA慢。（多了比较前后两个g哪个更好的环节）</p>
+<p>todolist：<br><a href="http://geek.csdn.net/news/detail/172477" target="_blank" rel="noopener">写给大家看的机器学习书【Part3】直观易懂的感知机学习算法PLA </a><br><a href="https://blog.csdn.net/llp1992/article/details/50594349#感知机的原始形式" target="_blank" rel="noopener">机器学习算法原理与实践（六）、感知机算法</a>   </p>
 <hr>
-<h2 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h2><ul>
+<h3 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h3><ul>
 <li><strong>binary classification</strong>：二元分类。常用于垃圾邮件判断、发不发信用卡、是否生病、广告是否盈利等。 </li>
 <li>Multiclass Classification：硬币识别问题；图片识别；电子邮件类别。especially for recognition。   </li>
 <li><strong>Regression</strong>：（bounded regression）：预测股票价格；预测天气等。（很多统计上的工具可以在这部分使用）。输出空间无限大的实数。   </li>
@@ -536,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-1-概念介绍"><span class="nav-number">1.</span> <span class="nav-text">Day 1  概念介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-2"><span class="nav-number"></span> <span class="nav-text">Day 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-3"><span class="nav-number"></span> <span class="nav-text">Day 3</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-1-概念介绍"><span class="nav-number">1.</span> <span class="nav-text">Day 1  概念介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-2-感知机学习算法"><span class="nav-number">2.</span> <span class="nav-text">Day 2 感知机学习算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-3"><span class="nav-number">3.</span> <span class="nav-text">Day 3</span></a></li></ol></div>
             
 
           </div>
