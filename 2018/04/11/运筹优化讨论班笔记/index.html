@@ -88,7 +88,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/yeITRfT.png">
 <meta property="og:image" content="https://i.imgur.com/qYc5QX2.png">
-<meta property="og:updated_time" content="2018-04-11T07:05:06.796Z">
+<meta property="og:updated_time" content="2018-04-11T07:09:49.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="运筹优化讨论班笔记">
 <meta name="twitter:description" content="本文为运筹优化讨论班笔记，主要记录求解mip问题的各种算法，branch and cut、Benders Decomposition、列生成、网络流问题等等。">
@@ -313,11 +313,7 @@
 
       
         <p>本文为运筹优化讨论班笔记，主要记录求解mip问题的各种算法，branch and cut、Benders Decomposition、列生成、网络流问题等等。<br><a id="more"></a>   </p>
-<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p><strong>branch and bound</strong><br>1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）<br>2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）   </p>
-<ol>
-<li>pseudocost branching 用伪成本。算部分分数变量即可。   </li>
-<li>选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认是交替进行。）<br>5.每个节点约束个数不变。</li>
-</ol>
+<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p><strong>branch and bound</strong><br>1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）<br>2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）<br>3.pseudocost branching 用伪成本。算部分分数变量即可。<br>4.选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认是交替进行。）<br>5.每个节点约束个数不变。</p>
 <p><strong>cuting plane</strong><br>遇到分数解，找到一个不等式，将分数解和其他解割开。对应松弛问题的可行域变小，即上界变小。<br>终止条件：找到整数解。</p>
 <p><strong>branch and cut</strong>  </p>
 <h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><p><strong>Benders Decomposition</strong>：is a solution method for solving certain large-scale optimization<br>problems；partitions the problem into multiple<br>smaller problems.   </p>
