@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="韩姗姗 联系方式 手机：MTU1MTA5Njk4MTY= （Base64）  Email：hanss@tju.edu.cn  微信号：aHNzNTIxOTY1 （Base64）   个人信息 女/1994 硕士/天津大学/管理科学与工程专业  微博：@木有脚的蒲公英  技术博客：http://hanss.top/ Github：http://github.com/hss133   项目经历高速公路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人简介">
-<meta property="og:url" content="http://hanss.top/about/index.html">
+<meta name="description" content="Day 1branch and bound1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）     pseudocost branching 用伪成本。算部分分数变量即可。    选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="运筹优化讨论班笔记">
+<meta property="og:url" content="http://hanss.top/2018/04/11/运筹优化讨论班笔记/index.html">
 <meta property="og:site_name" content="Han Shanshan&#39;s Blog">
-<meta property="og:description" content="韩姗姗 联系方式 手机：MTU1MTA5Njk4MTY= （Base64）  Email：hanss@tju.edu.cn  微信号：aHNzNTIxOTY1 （Base64）   个人信息 女/1994 硕士/天津大学/管理科学与工程专业  微博：@木有脚的蒲公英  技术博客：http://hanss.top/ Github：http://github.com/hss133   项目经历高速公路">
+<meta property="og:description" content="Day 1branch and bound1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）     pseudocost branching 用伪成本。算部分分数变量即可。    选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-09T08:53:32.729Z">
+<meta property="og:image" content="https://i.imgur.com/yeITRfT.png">
+<meta property="og:image" content="https://i.imgur.com/qYc5QX2.png">
+<meta property="og:updated_time" content="2018-04-11T06:57:40.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人简介">
-<meta name="twitter:description" content="韩姗姗 联系方式 手机：MTU1MTA5Njk4MTY= （Base64）  Email：hanss@tju.edu.cn  微信号：aHNzNTIxOTY1 （Base64）   个人信息 女/1994 硕士/天津大学/管理科学与工程专业  微博：@木有脚的蒲公英  技术博客：http://hanss.top/ Github：http://github.com/hss133   项目经历高速公路">
+<meta name="twitter:title" content="运筹优化讨论班笔记">
+<meta name="twitter:description" content="Day 1branch and bound1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）     pseudocost branching 用伪成本。算部分分数变量即可。    选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认">
+<meta name="twitter:image" content="https://i.imgur.com/yeITRfT.png">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://hanss.top/about/"/>
+  <link rel="canonical" href="http://hanss.top/2018/04/11/运筹优化讨论班笔记/"/>
 
 
 
 
 
-  <title>个人简介 | Han Shanshan's Blog</title>
+  <title>运筹优化讨论班笔记 | Han Shanshan's Blog</title>
   
 
 
@@ -230,59 +233,178 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hanss.top/2018/04/11/运筹优化讨论班笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="韩姗姗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Han Shanshan's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">个人简介</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h1 id="韩姗姗"><a href="#韩姗姗" class="headerlink" title="韩姗姗"></a>韩姗姗</h1><hr>
-<h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
-<li>手机：MTU1MTA5Njk4MTY= （Base64） </li>
-<li>Email：<a href="mailto:hanss@tju.edu.cn" target="_blank" rel="noopener">hanss@tju.edu.cn</a> </li>
-<li>微信号：aHNzNTIxOTY1 （Base64）</li>
+          <h1 class="post-title" itemprop="name headline">运筹优化讨论班笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T14:53:30+08:00">
+                2018-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p><strong>branch and bound</strong><br>1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）<br>2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）   </p>
+<ol>
+<li>pseudocost branching 用伪成本。算部分分数变量即可。   </li>
+<li>选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认是交替进行。）<br>5.每个节点约束个数不变。</li>
+</ol>
+<p><strong>cuting plane</strong><br>遇到分数解，找到一个不等式，将分数解和其他解割开。对应松弛问题的可行域变小，即上界变小。<br>终止条件：找到整数解。</p>
+<p><strong>branch and cut</strong>  </p>
+<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><p><strong>Benders Decomposition</strong>：is a solution method for solving certain large-scale optimization<br>problems；partitions the problem into multiple<br>smaller problems.   </p>
+<p>today：   </p>
+<ul>
+<li>we first formally describe Benders decomposition.</li>
+<li>We then briely describe some extensions and generalizations of Benders decomposition.      </li>
+<li>give a numerical example.</li>
 </ul>
-<hr>
-<h1 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h1><ul>
-<li>女/1994</li>
-<li>硕士/天津大学/管理科学与工程专业 </li>
-<li>微博：<a href="http://weibo.com/2278593907" target="_blank" rel="noopener">@木有脚的蒲公英</a> </li>
-<li>技术博客：<a href="http://hanss.top/">http://hanss.top/</a></li>
-<li>Github：<a href="http://github.com/hss133" target="_blank" rel="noopener">http://github.com/hss133</a></li>
+<p>In Benders decomposition a first-stage master problem is solved for a subset of variables, and the values of the remaining variables are determined by a second-stage subproblem given the values of the first-stage variables.（所以经常被用来解两阶段随机规划，自带主问题自问题）   </p>
+<p><strong>算法原理：</strong>因为较简单此处不再细数。只记录几个需要注意的问题。   </p>
+<ul>
+<li>子问题的对偶问题的可行域与y无关。（y此时在对偶问题的目标函数中，不影响可行域。）   </li>
+<li>如果对偶问题解空间为空，则A.对于一些y∈Y，主问题无界，原问题无界；或B.对于一些y∈Y，主问题无解，原问题不可行。   </li>
+<li>假定对偶问题解空间不为空，那我们可以获得可行域所有极值点和极方向，则A.根据极方向判断对偶问题是无界的，则原问题不可行；或B.根据极值点求原问题和对偶问题的有限最优解。<br><img src="https://i.imgur.com/yeITRfT.png" alt="">  </li>
+<li>显然，对于每个y都有一堆极点和极方向，这意味着有很多5c5b那样的约束，求解还是很困难。Benders分解的算法是，解放松的主问题（即只解部分约束下的该问题），得到一个候选的最优解（y<em>，q</em>）。然后把y<em> 给子问题，计算q(y</em>)（即子问题的目标函数值）。 如果q(y <em>)=q </em>，算法终止；否则，如果对偶自问题无界，加可行切5(b),如果q(y <em>)&gt;q </em>,加最优切5(c)。   </li>
+<li>因为极点和极方向是有限个，每次迭代产生新的可行切和最优切，所以算法一定能在有限次能产生最优解。（收敛）   </li>
 </ul>
-<hr>
-<h1 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h1><h2 id="高速公路环境下基于出行者行为视角的可变信息板管理研究"><a href="#高速公路环境下基于出行者行为视角的可变信息板管理研究" class="headerlink" title="高速公路环境下基于出行者行为视角的可变信息板管理研究"></a>高速公路环境下基于出行者行为视角的可变信息板管理研究</h2><h3 id="随机事故条件下异质可变信息板的选址优化"><a href="#随机事故条件下异质可变信息板的选址优化" class="headerlink" title="随机事故条件下异质可变信息板的选址优化"></a>随机事故条件下异质可变信息板的选址优化</h3><p>不同种类的可变信息板可展示信息的内容不同，对出行者产生影响也不同。通过建立一个两阶段随机规划模型，最小化系统总时间成本和经济成本，确定可变信息板的最优位置。模型为大规模混合整数规划，采用 Benders Decomposition算法求解。实现工具为Python &amp; Cplex。 </p>
-<h3 id="随机事故条件下移动式可变信息板的分配策略研究"><a href="#随机事故条件下移动式可变信息板的分配策略研究" class="headerlink" title="随机事故条件下移动式可变信息板的分配策略研究"></a>随机事故条件下移动式可变信息板的分配策略研究</h3><p>在上文研究基础上，进一步考虑移动式和固定式可变信息板同时使用时候 的优化情况，建立混合0-1规划模型，利用线性化技术使模型线性化，采用效果较好的启发式算法——模拟退火进行求解。 </p>
-<h2 id="高速公路网旅行时间分析及建模"><a href="#高速公路网旅行时间分析及建模" class="headerlink" title="高速公路网旅行时间分析及建模"></a>高速公路网旅行时间分析及建模</h2><p>针对x省高速公路收费数据展开路段旅行时间分布分析，运用Python及相关包完成数据清洗、统计分析和可视化等工作。基于旅行时间的对数正态分布、高斯分布等假设建立旅行时间分布模型，挖掘相关OD、path和 link之间的联系。 </p>
-<h2 id="物流运输交互系统"><a href="#物流运输交互系统" class="headerlink" title="物流运输交互系统"></a>物流运输交互系统</h2><p>荣获“创赢梦想——大学生商业创新挑战赛”全国第一名。参赛作品是一款物流运输交互软件——货gogo。负责部分包括使用Justinmind进行 产品的原型制作、产品展示讲解、产品介绍视频及ppt制作等。   </p>
-<hr>
-<h1 id="技能清单"><a href="#技能清单" class="headerlink" title="技能清单"></a>技能清单</h1><p>有良好的运筹学、统计学基础，了解并使用过随机规划、线性规划等运筹优化内容，了解TSP、VRP等基本优化问题； </p>
-<p>算法方面，掌握精确式算法如Benders 分解、列生成、Branch-and-Cut等原理；启发式算法如遗传算法、模拟退火、蚁群算法等。 </p>
-<p>编程方面，常用Python语言、Cplex和 Gurobi求解器；具备C/C++、面向对象和 数据结构等知识基础。 </p>
-<p>Adobe 系列：Premiere、Photoshop；<br>原型制作工具：Axure、Justinmind；<br>以及多年的新闻写作能力等。 </p>
-<hr>
-<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
+<p><strong>扩展：</strong>   </p>
+<ul>
+<li>因为主问题不必是线性规划，所以可以用来解混合整数规划、非线性规划、凸规划等。   </li>
+<li>因为主问题只是用来产生Benders Cut的，因此子问题也可以不是LP，但必须是凸规划（有对偶乘子、满足强对偶性才能行）。   </li>
+<li>在两阶段随机规划里：在给定一阶段变量后，二阶段不同场景是完全独立的，因此可以同时定义和求解多个子问题。（也就是<strong>L-Shaped的原始版本和多切版本</strong>。）</li>
+</ul>
+<p><strong>补充复习：</strong>   </p>
+<p><strong>1.对偶理论的性质</strong>:   </p>
+<ul>
+<li>对偶问题的对偶问题是原问题。   </li>
+<li>弱对偶性。CX&lt;=YB   </li>
+<li>最优性。CX=YB时获得最优解。   </li>
+<li>无界性。原问题为无界解，则对偶问题无解。(反证法。若对偶问题有解，一定存在一个可行解Y。对偶目标函数值为Yb=T。原问题无界，则一定存在可行解X使得CX&gt;T,则CX&gt;Yb,与弱对偶性违背，所以没有可行解。）   </li>
+</ul>
+<p><strong>2.极方向</strong>   </p>
+<p><a href="https://wenku.baidu.com/view/8e977bf14693daef5ef73d3a.html" target="_blank" rel="noopener">多面体、极点、极方向</a><br>The property extreme direction arises naturally in connection with the pointed closed convex cone, being analogous（类同于）to extreme point.  An extreme direction of a pointed closed convex cone is a vector corresponding to an edge that is a ray emanating （源自）from the origin.  In words, an extreme direction in a pointed closed convex cone is the direction of a ray, called an extreme ray, that cannot be expressed as a conic（圆锥的） combination of any ray directions in the cone distinct from it.<br><img src="https://i.imgur.com/qYc5QX2.png" alt=""><br>source：<a href="http://www.convexoptimization.com/dattorro/extreme_directions.html" target="_blank" rel="noopener">凸优化</a>    </p>
+<p><strong>3. 徒手写对偶</strong>      </p>
+<p><a href="https://wenku.baidu.com/view/12017aaef9c75fbfc77da26925c52cc58bd6900c.html" target="_blank" rel="noopener">线性规划对偶问题</a> </p>
 
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/09/The-GBDT-of-Machine-Learning/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -410,7 +532,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#韩姗姗"><span class="nav-number">1.</span> <span class="nav-text">韩姗姗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#联系方式"><span class="nav-number">2.</span> <span class="nav-text">联系方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个人信息"><span class="nav-number">3.</span> <span class="nav-text">个人信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目经历"><span class="nav-number">4.</span> <span class="nav-text">项目经历</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#高速公路环境下基于出行者行为视角的可变信息板管理研究"><span class="nav-number">4.1.</span> <span class="nav-text">高速公路环境下基于出行者行为视角的可变信息板管理研究</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#随机事故条件下异质可变信息板的选址优化"><span class="nav-number">4.1.1.</span> <span class="nav-text">随机事故条件下异质可变信息板的选址优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机事故条件下移动式可变信息板的分配策略研究"><span class="nav-number">4.1.2.</span> <span class="nav-text">随机事故条件下移动式可变信息板的分配策略研究</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高速公路网旅行时间分析及建模"><span class="nav-number">4.2.</span> <span class="nav-text">高速公路网旅行时间分析及建模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物流运输交互系统"><span class="nav-number">4.3.</span> <span class="nav-text">物流运输交互系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技能清单"><span class="nav-number">5.</span> <span class="nav-text">技能清单</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#致谢"><span class="nav-number">6.</span> <span class="nav-text">致谢</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-1"><span class="nav-number">1.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-2"><span class="nav-number">2.</span> <span class="nav-text">Day 2</span></a></li></ol></div>
             
 
           </div>
