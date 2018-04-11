@@ -312,170 +312,14 @@
 
       
         
-          
-            <h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p><strong>branch and bound</strong><br>1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）<br>2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）   </p>
-<ol>
-<li>pseudocost branching 用伪成本。算部分分数变量即可。   </li>
-<li>选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认是交替进行。）<br>5.每个节点约束个数不变。</li>
-</ol>
-<p><strong>cuting plane</strong><br>遇到分数解，找到一个不等式，将分数解和其他解割开。对应松弛问题的可行域变小，即上界变小。<br>终止条件：找到整数解。</p>
-<p><strong>branch and cut</strong>  </p>
-<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><p><strong>Benders Decomposition</strong>：is a solution method for solving certain large-scale optimization<br>problems；partitions the problem into multiple<br>smaller problems.   </p>
-<p>today：   </p>
-<ul>
-<li>we first formally describe Benders decomposition.</li>
-<li>We then briely describe some extensions and generalizations of Benders decomposition.      </li>
-<li>give a numerical example.</li>
-</ul>
-<p>In Benders decomposition a first-stage master problem is solved for a subset of variables, and the values of the remaining variables are determined by a second-stage subproblem given the values of the first-stage variables.（所以经常被用来解两阶段随机规划，自带主问题自问题）   </p>
-<p><strong>算法原理：</strong>因为较简单此处不再细数。只记录几个需要注意的问题。   </p>
-<ul>
-<li>子问题的对偶问题的可行域与y无关。（y此时在对偶问题的目标函数中，不影响可行域。）   </li>
-<li>如果对偶问题解空间为空，则A.对于一些y∈Y，主问题无界，原问题无界；或B.对于一些y∈Y，主问题无解，原问题不可行。   </li>
-<li>假定对偶问题解空间不为空，那我们可以获得可行域所有极值点和极方向，则A.根据极方向判断对偶问题是无界的，则原问题不可行；或B.根据极值点求原问题和对偶问题的有限最优解。<br><img src="https://i.imgur.com/yeITRfT.png" alt="">  </li>
-<li>显然，对于每个y都有一堆极点和极方向，这意味着有很多5c5b那样的约束，求解还是很困难。Benders分解的算法是，解放松的主问题（即只解部分约束下的该问题），得到一个候选的最优解（y<em>，q</em>）。然后把y<em> 给子问题，计算q(y</em>)（即子问题的目标函数值）。 如果q(y <em>)=q </em>，算法终止；否则，如果对偶自问题无界，加可行切5(b),如果q(y <em>)&gt;q </em>,加最优切5(c)。   </li>
-<li>因为极点和极方向是有限个，每次迭代产生新的可行切和最优切，所以算法一定能在有限次能产生最优解。（收敛）   </li>
-</ul>
-<p><strong>扩展：</strong>   </p>
-<ul>
-<li>因为主问题不必是线性规划，所以可以用来解混合整数规划、非线性规划、凸规划等。   </li>
-<li>因为主问题只是用来产生Benders Cut的，因此子问题也可以不是LP，但必须是凸规划（有对偶乘子、满足强对偶性才能行）。   </li>
-<li>在两阶段随机规划里：在给定一阶段变量后，二阶段不同场景是完全独立的，因此可以同时定义和求解多个子问题。（也就是<strong>L-Shaped的原始版本和多切版本</strong>。）</li>
-</ul>
-<p><strong>补充复习：</strong>   </p>
-<p><strong>1.对偶理论的性质</strong>:   </p>
-<ul>
-<li>对偶问题的对偶问题是原问题。   </li>
-<li>弱对偶性。CX&lt;=YB   </li>
-<li>最优性。CX=YB时获得最优解。   </li>
-<li>无界性。原问题为无界解，则对偶问题无解。(反证法。若对偶问题有解，一定存在一个可行解Y。对偶目标函数值为Yb=T。原问题无界，则一定存在可行解X使得CX&gt;T,则CX&gt;Yb,与弱对偶性违背，所以没有可行解。）   </li>
-</ul>
-<p><strong>2.极方向</strong>   </p>
-<p><a href="https://wenku.baidu.com/view/8e977bf14693daef5ef73d3a.html" target="_blank" rel="noopener">多面体、极点、极方向</a><br>The property extreme direction arises naturally in connection with the pointed closed convex cone, being analogous（类同于）to extreme point.  An extreme direction of a pointed closed convex cone is a vector corresponding to an edge that is a ray emanating （源自）from the origin.  In words, an extreme direction in a pointed closed convex cone is the direction of a ray, called an extreme ray, that cannot be expressed as a conic（圆锥的） combination of any ray directions in the cone distinct from it.<br><img src="https://i.imgur.com/qYc5QX2.png" alt=""><br>source：<a href="http://www.convexoptimization.com/dattorro/extreme_directions.html" target="_blank" rel="noopener">凸优化</a>    </p>
-<p><strong>3. 徒手写对偶</strong>      </p>
-<p><a href="https://wenku.baidu.com/view/12017aaef9c75fbfc77da26925c52cc58bd6900c.html" target="_blank" rel="noopener">线性规划对偶问题</a> </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hanss.top/2018/04/09/The-GBDT-of-Machine-Learning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="韩姗姗">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Han Shanshan's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/09/The-GBDT-of-Machine-Learning/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-09T17:09:01+08:00">
-                2018-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<h2 id="title-The-GBDT-of-Machine-Learning"><a href="#title-The-GBDT-of-Machine-Learning" class="headerlink" title="title: The GBDT of Machine Learning"></a>title: The GBDT of Machine Learning</h2>
-          
+          <p>本文为运筹优化讨论班笔记，主要记录求解mip问题的各种算法，branch and cut、Benders Decomposition、列生成、网络流问题等等。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/11/运筹优化讨论班笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1061,7 +905,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

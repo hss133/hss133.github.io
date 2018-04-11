@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="Day 1branch and bound1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）     pseudocost branching 用伪成本。算部分分数变量即可。    选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认">
+<meta name="description" content="本文为运筹优化讨论班笔记，主要记录求解mip问题的各种算法，branch and cut、Benders Decomposition、列生成、网络流问题等等。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="运筹优化讨论班笔记">
 <meta property="og:url" content="http://hanss.top/2018/04/11/运筹优化讨论班笔记/index.html">
 <meta property="og:site_name" content="Han Shanshan&#39;s Blog">
-<meta property="og:description" content="Day 1branch and bound1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）     pseudocost branching 用伪成本。算部分分数变量即可。    选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认">
+<meta property="og:description" content="本文为运筹优化讨论班笔记，主要记录求解mip问题的各种算法，branch and cut、Benders Decomposition、列生成、网络流问题等等。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/yeITRfT.png">
 <meta property="og:image" content="https://i.imgur.com/qYc5QX2.png">
-<meta property="og:updated_time" content="2018-04-11T06:57:40.728Z">
+<meta property="og:updated_time" content="2018-04-11T07:05:06.796Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="运筹优化讨论班笔记">
-<meta name="twitter:description" content="Day 1branch and bound1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）     pseudocost branching 用伪成本。算部分分数变量即可。    选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认">
+<meta name="twitter:description" content="本文为运筹优化讨论班笔记，主要记录求解mip问题的各种算法，branch and cut、Benders Decomposition、列生成、网络流问题等等。">
 <meta name="twitter:image" content="https://i.imgur.com/yeITRfT.png">
 
 
@@ -312,7 +312,8 @@
       
 
       
-        <h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p><strong>branch and bound</strong><br>1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）<br>2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）   </p>
+        <p>本文为运筹优化讨论班笔记，主要记录求解mip问题的各种算法，branch and cut、Benders Decomposition、列生成、网络流问题等等。<br><a id="more"></a>   </p>
+<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p><strong>branch and bound</strong><br>1.上下界会影响算法收敛速度。（所以要考虑如何松弛化、怎么找上下界）<br>2.Branching的时候选择最接近整数的那个分数变量。（考虑长远规划的话，把每个分数变量都算一下。浪费时间）   </p>
 <ol>
 <li>pseudocost branching 用伪成本。算部分分数变量即可。   </li>
 <li>选node，深度搜索找可行解找下解，广度搜索找更好地上届。两者不断交替。（cplex默认是交替进行。）<br>5.每个节点约束个数不变。</li>
@@ -377,8 +378,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/09/The-GBDT-of-Machine-Learning/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/04/04/Jupyter-Notebook入门/" rel="next" title="Jupyter Notebook入门">
+                <i class="fa fa-chevron-left"></i> Jupyter Notebook入门
               </a>
             
           </div>
@@ -466,7 +467,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
